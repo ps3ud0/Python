@@ -1,12 +1,12 @@
-hrs = input("Enter Hours:")
-rate = input("Enter The Rate per hour:")
-if int(hrs) > 40:
-    Extra = int(hrs) - 40
-    rate_extra = float(rate) * 1.5
-    Pay_extra = float(rate_extra) * float(Extra)
-else:
-    none
-hrs_trabajadas = float(hrs) - float(Extra)
-calculate = float(hrs_trabajadas) * float(rate)
-resultado = float(calculate) + float(Pay_extra)
-print(resultado)
+def computepay(h,r):
+    if int(h) > 40:
+        Extra = int(h) - 40
+        r_extra = float(r) * 1.5
+        Pay_extra = float(r_extra) * float(Extra)
+    h_trabajadas = float(h) - float(Extra)
+    calculate = float(h_trabajadas) * float(r)
+    resultado = float(calculate) + float(Pay_extra)
+    return resultado
+Hrs = input("Enter Hours:")
+rate = input("Enter The r per hour:")
+print(computepay(Hrs, rate))
