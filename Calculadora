@@ -1,0 +1,51 @@
+#----------------------------------------------------------------------------------------------
+def sumando(uno, dos):
+    sumando = int(uno) + int(dos)
+    return sumando
+def restar(uno, dos):
+    restar = int(uno) - int(dos)
+    return restar
+def multiplicar(uno, dos):
+    multiplicar = int(uno) * int(dos)
+    return multiplicar
+def dividir(uno, dos):
+    dividir = int(uno) / int(dos)
+    return dividir
+def elevacion(uno, dos):
+    elevacion = int(uno) ** int(dos)
+    return elevacion
+def operacion(message):
+    while True:
+        try:
+            userInput = int(input(message))
+        except ValueError:
+            print("Solo se acepta numero, favor volver a tratar")
+            continue
+        else:
+            return userInput
+            break
+#---------------------------------------------------------------------------------------------
+print("Bienvenido a la maquina a mi calculadora ")
+print("¿Que Operacion desea hacer?")
+print("1.- Sumar")
+print("2.- restar")
+print("3.- multiplicar")
+print("4.- dividir ")
+print("5.- elevacion ")
+print("Seleccione algun numero")
+seleccion = operacion("")
+uno = operacion("Ingresa el primero numero ")
+dos = operacion("Ingresa el segundo numero ")
+print("Realizando operacion...")
+print("El resulado es..")
+if seleccion == 1 :
+    print(sumando(uno, dos))
+elif seleccion == 2:
+    print(restar(uno, dos))
+elif seleccion == 3:
+    print(multiplicar(uno, dos))
+elif seleccion == 4 :
+    print(dividir(uno, dos))
+elif seleccion == 5:
+    print(elevacion(uno, dos))
+print("Gracias por usar mi calculadora")
