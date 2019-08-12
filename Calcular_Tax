@@ -1,0 +1,12 @@
+hrs = input("Enter Hours:")
+rate = input("Enter The Rate per hour:")
+if int(hrs) > 40:
+    Extra = int(hrs) - 40
+    rate_extra = float(rate) * 1.5
+    Pay_extra = float(rate_extra) * float(Extra)
+else:
+    none
+hrs_trabajadas = float(hrs) - float(Extra)
+calculate = float(hrs_trabajadas) * float(rate)
+resultado = float(calculate) + float(Pay_extra)
+print(resultado)
